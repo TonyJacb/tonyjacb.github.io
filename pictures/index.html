@@ -4,11 +4,17 @@ title: Pictures
 permalink: /pictures/
 ---
 
+<div style="padding-top: 80px;">
+  <h1 style="text-align: center; margin-bottom: 10px;">My Gallery</h1>
+  <p style="text-align: center; margin-bottom: 30px; font-style: italic; color: #555;">
+    A collection of images I found cool and some pictures of me taken by others.
+  </p>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  {% for img in site.data.pictures %}
-    <div style="flex: 0 0 33.33%; padding: 10px; box-sizing: border-box;">
-      <img src="/pictures/{{ img }}" alt="{{ img | split: '_' | first }}" style="width: 100%; height: auto;">
-    </div>
-  {% endfor %}
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    {% for img in site.data.pictures %}
+      <div style="flex: 0 0 33.33%; padding: 10px; box-sizing: border-box;">
+        <img src="/pictures/{{ img }}" alt="{{ img | split: '_' | first }}" style="width: 100%; height: auto;">
+      </div>
+    {% endfor %}
+  </div>
 </div>
