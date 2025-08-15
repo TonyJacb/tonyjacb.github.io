@@ -1,0 +1,169 @@
+---
+layout: default
+title: Home
+permalink: /home
+---
+
+<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tr style="padding:0px">
+    <td style="padding:0px">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr style="padding:0px">
+          <td style="padding:2.5%;width:60%;vertical-align:middle">
+            <h1>
+              Tony Jacob
+            </h1>
+            <p style="text-align:center">
+              <a href="https://docs.google.com/document/d/1Dr7tGFkfHIW99hdQi0y-BH43-krCDnvy/edit?usp=sharing&ouid=112104156942451569559&rtpof=true&sd=true"> CV </a> &nbsp;/&nbsp;
+              <a href="https://github.com/tjsos"> GitHub </a> &nbsp;/&nbsp;
+              <a href="https://scholar.google.com/citations?user=CZ9CcpQAAAAJ&hl=en"> Google Scholar </a> &nbsp;/&nbsp;
+              <a href="https://www.linkedin.com/in/tonyjac0b/"> LinkedIn </a> &nbsp;/&nbsp;
+              <a href="https://medium.com/@tonyjacob_"> Medium </a> &nbsp;/&nbsp;
+              <a href="https://www.youtube.com/@tonyjacob_"> YouTube </a> &nbsp;/&nbsp;
+            </p>
+          </td>
+          <td style="padding:2.5%;width:40%;max-width:40%">
+            <img style="width:100%;max-width:100%" alt="profile photo" src="/images/profile.jpg">
+          </td>
+        </tr>
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:2.5%;width:100%;vertical-align:middle">
+            <h2>Research</h2>
+          </td>
+        </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'research' %}
+        <tr>
+          <td style="padding:2.5%;width:50%;vertical-align:middle;min-width:120px">
+            <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+          </td>
+          <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <h3>{{post.title}}</h3>
+            <br>
+            {{post.authors}}
+            <br>
+            <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }} &nbsp; <em>{{post.honer}}</em>
+            <br>
+            {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+            {% if post.paper %}<a href="{{post.paper}}">paper</a> /{% endif %}
+            {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+            {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+            {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
+            {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+            {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
+            {% if post.youtube %}<a href="{{post.youtube}}">youtube</a> /{% endif %}
+            {% if post.thesis %}<a href="{{post.thesis}}">thesis</a> /{% endif %}
+            <p></p>
+            {{ post.excerpt }}
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+      
+      <!-- Repeat the same structure for Projects and Art + Media -->
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:2.5%;width:100%;vertical-align:middle">
+            <h2>Projects</h2>
+          </td>
+        </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'projects' %}
+        <tr>
+          <td style="padding:2.5%;width:50%;vertical-align:middle;min-width:120px">
+            <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+          </td>
+          <td style="padding:2.5%;width:auto;vertical-align:middle">
+            <h3>{{post.title}}</h3>
+            <br>
+            {{post.authors}}
+            <br>
+            <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }} &nbsp; <em>{{post.honer}}</em>
+            <br>
+            {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+            {% if post.paper %}<a href="{{post.paper}}">paper</a> /{% endif %}
+            {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+            {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+            {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
+            {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+            {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
+            {% if post.youtube %}<a href="{{post.youtube}}">youtube</a> /{% endif %}
+            <p></p>
+            {{ post.excerpt }}
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:2.5%;width:100%;vertical-align:middle">
+            <h2>Art + Media</h2>
+          </td>
+        </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'art' %}
+        <tr>
+          <td style="padding:2.5%;width:50%;vertical-align:middle;min-width:120px">
+            <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+          </td>
+          <td style="padding:2.5%;width:auto;vertical-align:middle">
+            <h3>{{post.title}}</h3>
+            <br>
+            {{post.authors}}
+            <br>
+            <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }} &nbsp; <em>{{post.honer}}</em>
+            <br>
+            {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> /{% endif %}
+            {% if post.paper %}<a href="{{post.paper}}">paper</a> /{% endif %}
+            {% if post.video %}<a href="{{post.video}}">video</a> /{% endif %}
+            {% if post.code %}<a href="{{post.code}}">code</a> /{% endif %}
+            {% if post.poster %}<a href="{{post.poster}}">poster</a> /{% endif %}
+            {% if post.slides %}<a href="{{post.slides}}">slides</a> /{% endif %}
+            {% if post.website %}<a href="{{post.website}}">website</a> /{% endif %}
+            {% if post.youtube %}<a href="{{post.youtube}}">youtube</a> /{% endif %}
+            <p></p>
+            {{ post.excerpt }}
+          </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:0px">
+            <br>
+            <p style="text-align:center;font-size:small;">
+              Yep it's another <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a> website and learned from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman </a>
+            </p>
+            <p style="text-align:center;font-size:small;">
+              Updated: 01/02/2025
+            </p>              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

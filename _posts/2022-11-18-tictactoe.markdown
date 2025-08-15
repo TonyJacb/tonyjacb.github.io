@@ -6,7 +6,7 @@ image: /images/tictactoe.gif
 categories: projects
 authors: 
   <strong>Tony Jacob</strong>,
-  <a href="https://vinaylanka.com/">Vinay Lanka</a>,
+  <a href="https://vinaylanka.com/">Vinay Lanka</a>
 video: https://youtu.be/Trr5ViJrN2M?si=ezyEtJB0s-Bm-9F1
 code: https://github.com/TonyJacb/TicTacToe-Gantry-Bot
 ---

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Pictures
+permalink: /pictures/
+---
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  {% for img in site.data.pictures %}
+    <div style="flex: 0 0 33.33%; padding: 10px; box-sizing: border-box;">
+      <img src="/pictures/{{ img }}" alt="{{ img | split: '_' | first }}" style="width: 100%; height: auto;">
+    </div>
+  {% endfor %}
+</div>

@@ -6,7 +6,7 @@ image: /images/pigeon.jpg
 categories: art
 authors: 
   <strong>Tony Jacob</strong>,
-  <a>Jonathan Jacob</a>,
+  <a>Jonathan Jacob</a>
 
 video: https://www.youtube.com/watch?v=a6WAVu5hDKM
 ---

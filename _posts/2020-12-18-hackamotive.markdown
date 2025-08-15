@@ -6,7 +6,7 @@ image: /images/hackamotive.gif
 categories: projects
 authors: 
   <strong>Tony Jacob</strong>,
-  <a>Krishna Prasad Bhatt</a>,
+  <a>Krishna Prasad Bhatt</a>
 venue: "VIT Vellore"
 honer: <font color="red"><strong>(Winner, Hackamotive’20 conducted by Elektrobit & VIT Vellore)</strong></font> 
 video: https://www.youtube.com/watch?v=LIl7j_ANAcQ

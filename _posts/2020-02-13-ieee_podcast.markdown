@@ -8,7 +8,7 @@ authors:
   <strong>Tony Jacob</strong>,
   <a>Madhav Rajesh</a>,
   <a href="https://gaganvarma.me/">Gagan Varma</a>,
-  <a>Sunny Chakraborti</a>,
+  <a>Sunny Chakraborti</a>
 
 venue: "Vellore Institute of Technology"
 video: https://youtube.com/shorts/xus_MtiFyjc?feature=share

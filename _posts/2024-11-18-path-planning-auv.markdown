@@ -6,7 +6,7 @@ image: /images/iceberg_mission.jpg
 categories: research
 authors: 
   <strong>Tony Jacob</strong>,
-  <a href="https://orcid.org/0000-0002-7081-0901">Mingxi Zhou</a>,
+  <a href="https://orcid.org/0000-0002-7081-0901">Mingxi Zhou</a>
 venue: "Oceans Halifax"
 honer: <font color="red"><strong>(Student Poster Competition Winner)</strong></font> 
 paper: https://ieeexplore.ieee.org/abstract/document/10754038

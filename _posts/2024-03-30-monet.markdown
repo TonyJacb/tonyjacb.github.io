@@ -7,7 +7,7 @@ categories: art
 authors: 
   <strong>Tony Jacob</strong>,
   <a>Farhang Naderi</a>,
-  <a href="https://geryvargas.com/">Gery Vargas</a>,
+  <a href="https://geryvargas.com/">Gery Vargas</a>
 
 venue: "Rhode Island School of Design"
 honer: <font color="red"><strong>(Visathon '24 Exhibit)</strong></font> 
