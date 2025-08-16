@@ -10,19 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install pyyaml
+      - run: pip install pyyaml
 
-      - name: Run the Python shuffle script
-        run: python generate_pictures_yaml.py
+      - run: python generate_pictures_yaml.py
 
       - name: Commit & push changes
         env:
@@ -30,10 +28,11 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
           git add _data/pictures.yml
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "Auto-shuffle pictures.yml"
-            git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
+            git push origin HEAD:main
           fi
