@@ -1,0 +1,33 @@
+name: Shuffle and Trigger GitHub Pages Rebuild
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Every day at 08:00 UTC
+  workflow_dispatch:     # Manual trigger from GitHub UI
+
+jobs:
+  shuffle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install PyYAML (if needed)
+        run: pip install pyyaml
+
+      - name: Run the Python shuffle script
+        run: python generate_pictures_yaml.py
+
+      - name: Commit & push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add _data/pictures.yml
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-shuffle pictures.yml"
+          git push
