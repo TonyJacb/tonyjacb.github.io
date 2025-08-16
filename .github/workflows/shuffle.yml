@@ -24,7 +24,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Run the Python shuffle script
-        run: python scripts/shuffle_images.py
+        run: python generate_pictures_yaml.py
 
       - name: Commit & push changes
         run: |
